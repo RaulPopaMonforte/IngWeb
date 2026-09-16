@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="es.unizar.webeng.hello.controller.HelloControllerMVCTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-14T13:33:46.413Z" hostname="raul-ZenBook-UX433FA" time="0.821">
+<testsuite name="es.unizar.webeng.hello.controller.HelloControllerMVCTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-15T11:29:25.160Z" hostname="raul-ZenBook-UX433FA" time="0.465">
   <properties/>
-  <testcase name="should return API response as JSON()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.109"/>
-  <testcase name="should return home page with default message()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.071"/>
-  <testcase name="should return home page with personalized message()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.04"/>
-  <system-out><![CDATA[2026-09-14 15:33:46 - Could not detect default configuration classes for test class [es.unizar.webeng.hello.controller.HelloControllerMVCTests]: HelloControllerMVCTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-09-14 15:33:46 - Found @SpringBootConfiguration es.unizar.webeng.hello.Application for test class es.unizar.webeng.hello.controller.HelloControllerMVCTests
-2026-09-14 15:33:46 - Could not detect default configuration classes for test class [es.unizar.webeng.hello.controller.HelloControllerMVCTests]: HelloControllerMVCTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-09-14 15:33:46 - Found @SpringBootConfiguration es.unizar.webeng.hello.Application for test class es.unizar.webeng.hello.controller.HelloControllerMVCTests
+  <testcase name="should return API response as JSON()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.048"/>
+  <testcase name="should return home page with default message()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.041"/>
+  <testcase name="should return home page with personalized message()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.02"/>
+  <system-out><![CDATA[2026-09-15 13:29:25 - Could not detect default configuration classes for test class [es.unizar.webeng.hello.controller.HelloControllerMVCTests]: HelloControllerMVCTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-09-15 13:29:25 - Found @SpringBootConfiguration es.unizar.webeng.hello.Application for test class es.unizar.webeng.hello.controller.HelloControllerMVCTests
+2026-09-15 13:29:25 - Could not detect default configuration classes for test class [es.unizar.webeng.hello.controller.HelloControllerMVCTests]: HelloControllerMVCTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-09-15 13:29:25 - Found @SpringBootConfiguration es.unizar.webeng.hello.Application for test class es.unizar.webeng.hello.controller.HelloControllerMVCTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -18,13 +18,13 @@
 
  :: Spring Boot ::                (v4.1.0)
 
-2026-09-14 15:33:46 - Starting HelloControllerMVCTests using Java 25.0.4.1 with PID 16409 (started by raul in /home/raul/Universidad/Cuarto/IngWeb/lab1-git-race)
-2026-09-14 15:33:46 - Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-09-14 15:33:46 - No active profile set, falling back to 1 default profile: "default"
-2026-09-14 15:33:46 - Initializing Spring TestDispatcherServlet ''
-2026-09-14 15:33:46 - Initializing Servlet ''
-2026-09-14 15:33:46 - Completed initialization in 2 ms
-2026-09-14 15:33:46 - Started HelloControllerMVCTests in 0.459 seconds (process running for 9.599)
+2026-09-15 13:29:25 - Starting HelloControllerMVCTests using Java 25.0.4.1 with PID 45412 (started by raul in /home/raul/Universidad/Cuarto/IngWeb/P1)
+2026-09-15 13:29:25 - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-09-15 13:29:25 - No active profile set, falling back to 1 default profile: "default"
+2026-09-15 13:29:25 - Initializing Spring TestDispatcherServlet ''
+2026-09-15 13:29:25 - Initializing Servlet ''
+2026-09-15 13:29:25 - Completed initialization in 1 ms
+2026-09-15 13:29:25 - Started HelloControllerMVCTests in 0.285 seconds (process running for 6.636)
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -58,7 +58,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"message":"Hello, Test!","timestamp":"2026-09-14T13:33:47.028213519Z"}
+             Body = {"message":"Hello, Test!","timestamp":"2026-09-15T11:29:25.522806727Z"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
