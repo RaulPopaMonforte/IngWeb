@@ -15,21 +15,40 @@ import java.time.ZoneId
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 
 @Controller
 class HelloController(
     @param:Value("\${app.message:Hello World}") 
-    private val message: String
+    private val message: String,
+    private val timeDependingController: TimeDependingController
 ) {
     
+    /**
+     * Se ha modificado la función con respecto a la proporcionada en el guión 
+     * de tal manera que:
+     *      1. Se de una bienvenida personalizada en función del momento del día
+     *      2. Además de la bienvenida se indique el momento exacto de la última 
+     *         petición al servidor
+     */
     @GetMapping("/")
     fun welcome(
         model: Model,
         @RequestParam(defaultValue = "") name: String
     ): String {
-        val greeting = if (name.isNotBlank()) "Hello, $name!" else message
+        val formatoFecha = DateTimeFormatter.ofPattern(
+            "d 'de' MMMM 'de' yyyy, HH:mm",
+            Locale("es", "ES")
+        )
+        
+        val respuesta = timeDependingController.timeDependingGreeting()
+        val greeting = if (name.isNotBlank()) "${respuesta.first} $name!" else message
+
         model.addAttribute("message", greeting)
         model.addAttribute("name", name)
+        model.addAttribute("timestamp", respuesta.second.format(formatoFecha).
+                toString())
         return "welcome"
     }
 }
@@ -49,7 +68,14 @@ class HelloApiController {
 @RestController
 class TimeDependingController {
 
-    
+    /**
+     * Crea un recibimiento para el usuario en función de la hora a la que 
+     * este se encuente. Antes del medio día recibimiento = "Buenos días", 
+     * después del medio día recibimiento = "Buenas tardes".
+     * 
+     * @return Devuelve la tupla con el recibimiento correspondiente y el 
+     *         timestamp en el que se realizó la petición.
+     */
     fun timeDependingGreeting(): Pair<String, ZonedDateTime> 
     {
         var greeting : String
@@ -66,6 +92,16 @@ class TimeDependingController {
         }
     }
 
+    /**
+     * Expone el endpoint dedicado a la obtención en formato JSON de un 
+     * recibimiento personalizado basado en el momento del día.
+     * 
+     * @param nombre Parametro pasado en la petición HTTP que será interpretado
+     *        cómo el nombre de la persona que espera el recibimiento.
+     * 
+     * @return Devuelve un mapa de tuplas (String,String) que representa la salida
+     *         en formato JSON.
+     */
     @GetMapping("/api/helloTime", produces = [MediaType.APPLICATION_JSON_VALUE])
     fun greetingTime(@RequestParam(defaultValue = "Desconocido") nombre : String)
         : Map<String,String>  
