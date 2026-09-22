@@ -1,5 +1,11 @@
 # Lab 1 Git Race -- Project Report
 
+## Initial repository setup issue
+
+At the beginning of the lab, I did not clone the final UNIZAR repository using the procedure indicated in the guide. Instead, I started working from a previous copy of the starter project and later initialized my own Git repository from that copy. As a consequence, the original UNIZAR initial commit was not preserved in my Git history and some generated Gradle and build files were accidentally tracked.
+
+Once I identified the issue, I kept my existing development history, removed the generated files from version control, restored the appropriate `.gitignore`, and documented the situation instead of rewriting or artificially reconstructing the previous commits.
+
 ## What I specified
 
 I wanted to extend the hello application with a greeting chosen by the server from the current time in Madrid. A named visitor should see "Buenos días" before or at noon and "Buenas tardes" after noon. The page should also show the time of the request in a readable Spanish format. A new JSON route should return the greeting and a timestamp. The existing default page message and `/api/hello` route should keep working.
@@ -35,3 +41,5 @@ The compiler still reports a deprecation warning for the two-argument `Locale` c
 - **Representative prompts:** "what type does this return: tiempoActual.atZone(IdZona)?"; "por qué fallan los test de HelloControllerMVCTests.kt"; "explícame de manera completa la estructura del proyecto" y "revisa el fichero REPORT.md".
 - **Affected files/sections:** The advice informed the time and formatting code in `HelloController.kt` and the earlier test updates; the assistant drafted the text of `REPORT.md` from the repository changes and observed test results. The assistant also added the MVC test for `/api/helloTime` in `HelloControllerMVCTests.kt`.
 - **Citations:** No external code snippets were adapted for this increment.
+- **Validation steps:** I ran `./gradlew check`, `./gradlew test --rerun-tasks`, and the MVC test suite, correcting the missing `TimeDependingController` in the Spring test slice.
+- **Human-reviewed:** I reviewed the generated suggestions, kept the time-dependent greeting and test changes, adapted them to my implementation, and verified the final behaviour and tests myself.    
