@@ -9,10 +9,10 @@ import org.springframework.ui.ExtendedModelMap
 class HelloControllerUnitTests {
     private lateinit var controller: HelloController
     private lateinit var model: Model
-    
     @BeforeEach
     fun setup() {
-        controller = HelloController("Test Message")
+        val timeDependingController = TimeDependingController()
+        controller = HelloController("Test Message",timeDependingController)
         model = ExtendedModelMap()
     }
     
@@ -25,12 +25,18 @@ class HelloControllerUnitTests {
         assertThat(model.getAttribute("name")).isEqualTo("")
     }
     
+    /**
+     * Se ha modificado el test para que tenga el cuenta el greeting adecuado
+     */
     @Test
     fun `should return welcome view with personalized message`() {
         val view = controller.welcome(model, "Developer")
         
         assertThat(view).isEqualTo("welcome")
-        assertThat(model.getAttribute("message")).isEqualTo("Hello, Developer!")
+        val timeDependingController = TimeDependingController()
+        val resultado = timeDependingController.timeDependingGreeting()
+        val greeting = resultado.first
+        assertThat(model.getAttribute("message")).isEqualTo("$greeting, Developer!")
         assertThat(model.getAttribute("name")).isEqualTo("Developer")
     }
     

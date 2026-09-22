@@ -43,7 +43,7 @@ class HelloController(
         )
         
         val respuesta = timeDependingController.timeDependingGreeting()
-        val greeting = if (name.isNotBlank()) "${respuesta.first} $name!" else message
+        val greeting = if (name.isNotBlank()) "${respuesta.first}, $name!" else message
 
         model.addAttribute("message", greeting)
         model.addAttribute("name", name)

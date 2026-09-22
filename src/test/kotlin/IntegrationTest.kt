@@ -1,5 +1,6 @@
 package es.unizar.webeng.hello
 
+import es.unizar.webeng.hello.controller.TimeDependingController
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -36,7 +37,11 @@ class IntegrationTest {
         val response = restTemplate.getForEntity("http://localhost:$port?name=Developer", String::class.java)
         
         assertThat(response.statusCode).isEqualTo(HttpStatus.OK)
-        assertThat(response.body).contains("Hello, Developer!")
+
+        val timeDependingController = TimeDependingController()
+        val resultado = timeDependingController.timeDependingGreeting()
+        val greeting = resultado.first
+        assertThat(response.body).contains("$greeting, Developer!")
     }
 
     @Test
