@@ -12,7 +12,7 @@ I would check the result by opening the page with and without a name, calling th
 - The `/` controller now uses that greeting when the `name` query parameter is present and adds a formatted timestamp to the Thymeleaf model. With no name, it still uses the configured `app.message`. The existing `GET /api/hello` route still returns its original English message and UTC timestamp.
 - `src/main/resources/templates/welcome.html`: added a paragraph that displays the `timestamp` model attribute. Thymeleaf replaces the sample text inside that paragraph when the template is rendered.
 - `src/test/kotlin/controller/HelloControllerUnitTests.kt`, `HelloControllerMVCTests.kt`, and `src/test/kotlin/IntegrationTest.kt`: adapted construction and expectations for the time-based greeting. The MVC test includes the new controller in its Spring test slice and checks the `/api/helloTime` JSON response.
-- `.gitignore`: added an entry for `comportamiento_peticiones_server.png`. The branch also contains an empty file named `git`; it has no application behavior and should be reviewed before submission.
+- `.gitignore`: added an entry for `comportamiento_peticiones_server.png`.
 
 To try the increment, run `./gradlew bootRun`, then visit `http://localhost:8080/?name=Raul` and `http://localhost:8080/api/helloTime?nombre=Raul`. The page uses `name`; the new JSON route uses `nombre`. There are no new configuration properties or dependencies.
 
