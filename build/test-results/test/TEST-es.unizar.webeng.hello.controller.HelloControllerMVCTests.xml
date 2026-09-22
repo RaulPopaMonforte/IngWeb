@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="es.unizar.webeng.hello.controller.HelloControllerMVCTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-22T07:09:25.314Z" hostname="raul-ZenBook-UX433FA" time="3.993">
+<testsuite name="es.unizar.webeng.hello.controller.HelloControllerMVCTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-22T07:22:55.569Z" hostname="raul-ZenBook-UX433FA" time="0.486">
   <properties/>
-  <testcase name="should return API response as JSON()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.837"/>
-  <testcase name="should return time-dependent greeting and Madrid timestamp as JSON()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.076"/>
-  <testcase name="should return home page with default message()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.335"/>
-  <testcase name="should return home page with personalized message()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.029"/>
-  <system-out><![CDATA[09:09:25.563 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [es.unizar.webeng.hello.controller.HelloControllerMVCTests]: HelloControllerMVCTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-09:09:25.909 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration es.unizar.webeng.hello.Application for test class es.unizar.webeng.hello.controller.HelloControllerMVCTests
-09:09:25.914 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [es.unizar.webeng.hello.controller.HelloControllerMVCTests]: HelloControllerMVCTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-09:09:25.937 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration es.unizar.webeng.hello.Application for test class es.unizar.webeng.hello.controller.HelloControllerMVCTests
+  <testcase name="should return API response as JSON()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.063"/>
+  <testcase name="should return time-dependent greeting and Madrid timestamp as JSON()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.046"/>
+  <testcase name="should return home page with default message()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.048"/>
+  <testcase name="should return home page with personalized message()" classname="es.unizar.webeng.hello.controller.HelloControllerMVCTests" time="0.019"/>
+  <system-out><![CDATA[2026-09-22 09:22:55 - Could not detect default configuration classes for test class [es.unizar.webeng.hello.controller.HelloControllerMVCTests]: HelloControllerMVCTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-09-22 09:22:55 - Using ContextCustomizerFactory implementations for test class [HelloControllerMVCTests]: [WebDriverContextCustomizerFactory, SpringBootTestRandomPortContextCustomizerFactory, OnFailureConditionReportContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ImportsContextCustomizerFactory, PropertyMappingContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, BeanOverrideContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+2026-09-22 09:22:55 - Using ContextCustomizers for test class [HelloControllerMVCTests]: [WebDriverContextCustomizer, SpringBootTestRandomPortContextCustomizer, OnFailureConditionReportContextCustomizer, DisableAutoConfigurationContextCustomizer, ImportsContextCustomizer, PropertyMappingContextCustomizer, ExcludeFilterContextCustomizer, TypeExcludeFiltersContextCustomizer, DuplicateJsonObjectContextCustomizer, DynamicPropertiesContextCustomizer]
+2026-09-22 09:22:55 - Found @SpringBootConfiguration es.unizar.webeng.hello.Application for test class es.unizar.webeng.hello.controller.HelloControllerMVCTests
+2026-09-22 09:22:55 - Could not detect default configuration classes for test class [es.unizar.webeng.hello.controller.HelloControllerMVCTests]: HelloControllerMVCTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-09-22 09:22:55 - Using ContextCustomizerFactory implementations for test class [HelloControllerMVCTests]: [WebDriverContextCustomizerFactory, SpringBootTestRandomPortContextCustomizerFactory, OnFailureConditionReportContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ImportsContextCustomizerFactory, PropertyMappingContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, BeanOverrideContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+2026-09-22 09:22:55 - Using ContextCustomizers for test class [HelloControllerMVCTests]: [WebDriverContextCustomizer, SpringBootTestRandomPortContextCustomizer, OnFailureConditionReportContextCustomizer, DisableAutoConfigurationContextCustomizer, ImportsContextCustomizer, PropertyMappingContextCustomizer, ExcludeFilterContextCustomizer, TypeExcludeFiltersContextCustomizer, DuplicateJsonObjectContextCustomizer, DynamicPropertiesContextCustomizer]
+2026-09-22 09:22:55 - Found @SpringBootConfiguration es.unizar.webeng.hello.Application for test class es.unizar.webeng.hello.controller.HelloControllerMVCTests
+2026-09-22 09:22:55 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [HelloControllerMVCTests]: using SpringBootContextLoader
+2026-09-22 09:22:55 - Using TestExecutionListeners for test class [HelloControllerMVCTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, BeanOverrideTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, CommonCachesTestExecutionListener, EventPublishingTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockitoResetTestExecutionListener]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -19,26 +25,26 @@
 
  :: Spring Boot ::                (v4.1.0)
 
-2026-09-22 09:09:26 - Starting HelloControllerMVCTests using Java 25.0.4.1 with PID 16845 (started by raul in /home/raul/Universidad/Cuarto/IngWeb/P1)
-2026-09-22 09:09:26 - Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-09-22 09:09:26 - No active profile set, falling back to 1 default profile: "default"
-2026-09-22 09:09:26 - Loading source class es.unizar.webeng.hello.Application
-2026-09-22 09:09:26 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5af8bb51
-2026-09-22 09:09:27 - @EnableAutoConfiguration was declared on a class in the package 'es.unizar.webeng.hello'. Automatic @Repository and @Entity scanning is enabled.
-2026-09-22 09:09:27 - 5 mappings in 'requestMappingHandlerMapping'
-2026-09-22 09:09:27 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2026-09-22 09:09:27 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-09-22 09:09:27 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-09-22 09:09:27 - Mapping filters: resourceUrlEncodingFilter urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-09-22 09:09:27 - Mapping servlets: 
-2026-09-22 09:09:27 - Filter 'characterEncodingFilter' configured for use
-2026-09-22 09:09:27 - Filter 'formContentFilter' configured for use
-2026-09-22 09:09:27 - Filter 'requestContextFilter' configured for use
-2026-09-22 09:09:27 - Filter 'resourceUrlEncodingFilter' configured for use
-2026-09-22 09:09:27 - Initializing Spring TestDispatcherServlet ''
-2026-09-22 09:09:27 - Initializing Servlet ''
-2026-09-22 09:09:27 - Completed initialization in 8 ms
-2026-09-22 09:09:27 - 
+2026-09-22 09:22:55 - Starting HelloControllerMVCTests using Java 25.0.4.1 with PID 23785 (started by raul in /home/raul/Universidad/Cuarto/IngWeb/P1)
+2026-09-22 09:22:55 - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-09-22 09:22:55 - No active profile set, falling back to 1 default profile: "default"
+2026-09-22 09:22:55 - Loading source class es.unizar.webeng.hello.Application
+2026-09-22 09:22:55 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4645a575
+2026-09-22 09:22:55 - @EnableAutoConfiguration was declared on a class in the package 'es.unizar.webeng.hello'. Automatic @Repository and @Entity scanning is enabled.
+2026-09-22 09:22:55 - 5 mappings in 'requestMappingHandlerMapping'
+2026-09-22 09:22:55 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-09-22 09:22:55 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-09-22 09:22:55 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-09-22 09:22:55 - Mapping filters: resourceUrlEncodingFilter urls=[/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-09-22 09:22:55 - Mapping servlets: 
+2026-09-22 09:22:55 - Filter 'characterEncodingFilter' configured for use
+2026-09-22 09:22:55 - Filter 'formContentFilter' configured for use
+2026-09-22 09:22:55 - Filter 'requestContextFilter' configured for use
+2026-09-22 09:22:55 - Filter 'resourceUrlEncodingFilter' configured for use
+2026-09-22 09:22:55 - Initializing Spring TestDispatcherServlet ''
+2026-09-22 09:22:55 - Initializing Servlet ''
+2026-09-22 09:22:55 - Completed initialization in 2 ms
+2026-09-22 09:22:55 - 
 
 
 ============================
@@ -323,10 +329,10 @@ Unconditional classes:
 
 
 
-2026-09-22 09:09:28 - Started HelloControllerMVCTests in 1.978 seconds (process running for 3.652)
-2026-09-22 09:09:28 - Mapped to es.unizar.webeng.hello.controller.HelloApiController#helloApi(String)
-2026-09-22 09:09:28 - Using 'application/json', given [*/*] and supported [application/json]
-2026-09-22 09:09:28 - Writing [{message=Hello, Test!, timestamp=2026-09-22T07:09:28.791716086Z}]
+2026-09-22 09:22:55 - Started HelloControllerMVCTests in 0.252 seconds (process running for 6.451)
+2026-09-22 09:22:55 - Mapped to es.unizar.webeng.hello.controller.HelloApiController#helloApi(String)
+2026-09-22 09:22:55 - Using 'application/json', given [*/*] and supported [application/json]
+2026-09-22 09:22:55 - Writing [{message=Hello, Test!, timestamp=2026-09-22T07:22:55.886768760Z}]
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -360,15 +366,15 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"message":"Hello, Test!","timestamp":"2026-09-22T07:09:28.791716086Z"}
+             Body = {"message":"Hello, Test!","timestamp":"2026-09-22T07:22:55.886768760Z"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2026-09-22 09:09:28 - Mapped to es.unizar.webeng.hello.controller.TimeDependingController#greetingTime(String)
-2026-09-22 09:09:28 - Using 'application/json', given [*/*] and supported [application/json]
-2026-09-22 09:09:28 - Writing [{message=Buenos días, Raul, timestamp=2026-09-22T09:09:28.879996122+02:00[Europe/Madrid]}]
-2026-09-22 09:09:28 - Mapped to es.unizar.webeng.hello.controller.HelloController#welcome(Model, String)
-2026-09-22 09:09:28 - Selected '*/*' given [*/*]
+2026-09-22 09:22:55 - Mapped to es.unizar.webeng.hello.controller.TimeDependingController#greetingTime(String)
+2026-09-22 09:22:55 - Using 'application/json', given [*/*] and supported [application/json]
+2026-09-22 09:22:55 - Writing [{message=Buenos días, Raul, timestamp=2026-09-22T09:22:55.966776554+02:00[Europe/Madrid]}]
+2026-09-22 09:22:55 - Mapped to es.unizar.webeng.hello.controller.HelloController#welcome(Model, String)
+2026-09-22 09:22:55 - Selected '*/*' given [*/*]
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -397,7 +403,7 @@ ModelAndView:
         Attribute = name
             value = 
         Attribute = timestamp
-            value = 22 de septiembre de 2026, 09:09
+            value = 22 de septiembre de 2026, 09:22
 
 FlashMap:
        Attributes = null
@@ -441,7 +447,7 @@ MockHttpServletResponse:
                         <img class="d-block mx-auto mb-4 main-logo" src="/assets/logo.svg" alt="Universidad Zaragoza Logo">
                         <h1 class="display-4 fw-bold text-primary mb-4">Welcome to Modern Web App</h1>
                         <p class="lead mb-4">Welcome to the Modern Web App!</p>
-                        <p class="lead mb-4">22 de septiembre de 2026, 09:09</p>
+                        <p class="lead mb-4">22 de septiembre de 2026, 09:22</p>
 
                         <!-- HTTP Debug Section -->
                         <div class="row mt-4">
@@ -573,8 +579,8 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2026-09-22 09:09:29 - Mapped to es.unizar.webeng.hello.controller.HelloController#welcome(Model, String)
-2026-09-22 09:09:29 - Selected '*/*' given [*/*]
+2026-09-22 09:22:56 - Mapped to es.unizar.webeng.hello.controller.HelloController#welcome(Model, String)
+2026-09-22 09:22:56 - Selected '*/*' given [*/*]
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -603,7 +609,7 @@ ModelAndView:
         Attribute = name
             value = Developer
         Attribute = timestamp
-            value = 22 de septiembre de 2026, 09:09
+            value = 22 de septiembre de 2026, 09:22
 
 FlashMap:
        Attributes = null
@@ -647,7 +653,7 @@ MockHttpServletResponse:
                         <img class="d-block mx-auto mb-4 main-logo" src="/assets/logo.svg" alt="Universidad Zaragoza Logo">
                         <h1 class="display-4 fw-bold text-primary mb-4">Welcome to Modern Web App</h1>
                         <p class="lead mb-4">Buenos días, Developer!</p>
-                        <p class="lead mb-4">22 de septiembre de 2026, 09:09</p>
+                        <p class="lead mb-4">22 de septiembre de 2026, 09:22</p>
 
                         <!-- HTTP Debug Section -->
                         <div class="row mt-4">
@@ -780,10 +786,5 @@ MockHttpServletResponse:
    Redirected URL = null
           Cookies = []
 ]]></system-out>
-  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
-WARNING: A Java agent has been loaded dynamically (/home/raul/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.18.10/9426d28828bdcdf42666bb7a68c468279ea78f59/byte-buddy-agent-1.18.10.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>
